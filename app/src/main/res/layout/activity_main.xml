@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--注意事项：
+      1.至少两个约束，（水平方向与垂直方向）	  -->
+    <!--练习1：添加1个控件tv1A在左上角-->
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorAccent"
+        android:text="tv1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--练习2：添加1个控件tv2在tv1的右边-->
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        android:text="tv2"
+        app:layout_constraintLeft_toRightOf="@id/tv1"
+        app:layout_constraintTop_toTopOf="@id/tv1" />
+
+    <!--练习3：微信聊天列表界面-->
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/orange"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    <TextView
+        android:id="@+id/tv3_1"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        android:text="WeChat Team"
+        app:layout_constraintLeft_toRightOf="@id/tv3"
+        app:layout_constraintTop_toTopOf="@id/tv3" />
+
+    <TextView
+        android:id="@+id/tv3_2"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        android:text="Welcome back! Fell free to"
+        app:layout_constraintBottom_toBottomOf="@id/tv3"
+        app:layout_constraintLeft_toRightOf="@id/tv3" />
+
+    <TextView
+        android:id="@+id/tv3_3"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/buy_right_now"
+        android:text="1/30/19"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv3" />
+
+    <!--练习4 实现一个“L”-->
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toStartOf="@id/tv3"
+        app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+    <TextView
+        android:id="@+id/tv4_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/red"
+        app:layout_constraintLeft_toLeftOf="@id/tv4"
+        app:layout_constraintTop_toBottomOf="@id/tv4" />
+
+    <TextView
+        android:id="@+id/tv4_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toEndOf="@id/tv4_1"
+        app:layout_constraintTop_toTopOf="@id/tv4_1" />
+
+    <TextView
+        android:id="@+id/tv4_3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toEndOf="@id/tv4_2"
+        app:layout_constraintTop_toTopOf="@id/tv4_2" />
+
+    <TextView
+        android:id="@+id/tv4_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/red"
+        app:layout_constraintStart_toEndOf="@id/tv4_3"
+        app:layout_constraintTop_toTopOf="@id/tv4_3" />
+
+    <!--练习5-实现一个控件依照另一个控件垂直居中-->
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/bottom_click"
+        app:layout_constraintStart_toStartOf="@id/tv4_1"
+        app:layout_constraintTop_toBottomOf="@id/tv4_1" />
+
+    <TextView
+        android:id="@+id/tv5_1"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/bottom_click"
+        app:layout_constraintBottom_toBottomOf="@id/tv5"
+        app:layout_constraintStart_toEndOf="@id/tv5"
+        app:layout_constraintTop_toTopOf="@id/tv5" />
+    <!--练习6-实现一个控件依照另一个控件底边垂直居中-->
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/orange1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv5"
+        />
+    <TextView
+        android:id="@+id/tv6_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="@id/tv6"
+        app:layout_constraintEnd_toEndOf="@id/tv6"
+        app:layout_constraintTop_toBottomOf="@id/tv6"
+        app:layout_constraintBottom_toBottomOf="@id/tv6"
+        />
+    <!--练习7  (0dp/match_constraint) 与match_parent的区别-->
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="进入下一界面"
+        app:layout_constraintLeft_toLeftOf="@id/tv6"
+        app:layout_constraintTop_toBottomOf="@id/tv6_1"
+        app:layout_constraintRight_toLeftOf="@id/tv6_1"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
