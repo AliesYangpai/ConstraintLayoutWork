@@ -57,8 +57,8 @@
         android:text="TextView"
         app:layout_constraintBaseline_toBaselineOf="@id/tv9_1"
         app:layout_constraintStart_toEndOf="@id/tv9_1" />
-    <!--练习10 约束对齐时，文本过长超过布局边界 使用app:layout_constrainedWidth="true"-->
-    <!--layout_constraintHorizontal_bias 约束偏向 -->
+    <!--练习10 约束对齐时，文本过长超过布局边界 使用app:layout_constrainedWidth="true"限制控件⼤⼩不会超过约束范围。-->
+    <!--layout_constraintHorizontal_bias 约束偏向 [0,1] 代表控件在约束的位置偏向 -->
     <TextView
         android:id="@+id/tv10_1"
         android:layout_width="80dp"
@@ -79,4 +79,39 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/tv10_1" />
 
+    <!--练习11，当一个空间隐藏的时候，另一个控件仍然对它有相对位置使用 app:layout_goneMarginLeft="15dp"-->
+
+    <TextView
+        android:id="@+id/tv11_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:background="@color/blue_one"
+        app:layout_constraintStart_toStartOf="@id/tv10_1"
+        app:layout_constraintTop_toBottomOf="@id/tv10_1"
+        />
+    <TextView
+        android:id="@+id/tv11_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/green"
+        android:layout_marginStart="15dp"
+        app:layout_goneMarginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@id/tv11_1"
+        app:layout_constraintTop_toTopOf="@id/tv11_1"
+        />
+
+    <!--练习12-->
+    <!--两个或多个控件一起垂直居中-->
+    <!--双向连接后，使用app:layout_constraintVertical_chainStyle="packed"-->
+
+    <!--练习13-->
+    <!--设置控件宽高比-->
+
+    <!--练习14-->
+    <!--设置约束百分比（这个是针对父容器）-->
+
+    <!--练习15-->
+    <!--GuideLine辅助线-->
 </androidx.constraintlayout.widget.ConstraintLayout>
