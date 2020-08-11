@@ -113,5 +113,14 @@
     <!--设置约束百分比（这个是针对父容器）-->
 
     <!--练习15-->
-    <!--GuideLine辅助线-->
+    <!--Helper帮助控件-->
+    <!--GuideLine辅助线 app:layout_constraintGuide_percent-->
+
+    <!--练习16-->
+    <!--使用Group控件来实现，多个控件显示与隐藏 app:constraint_referenced_ids="tv1,tv2"-->
+    <!--目的是为了 不嵌套-->
+    <!--使用layer来进行 多个控件的动画-->
+
+    <!--练习17-->
+    <!--barrier障碍线-->
 </androidx.constraintlayout.widget.ConstraintLayout>
